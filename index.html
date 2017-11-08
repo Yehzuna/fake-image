@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Dummy SVG</title>
+    <title>Fake Image Generator</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -9,41 +9,81 @@
 </head>
 <body>
 
+<nav class="navbar navbar-dark bg-dark">
+    <span class="navbar-brand mb-0 h1">Fake Image Generator</span>
+</nav>
+
 <div class="container">
-    <form>
-        <div class="form-group">
-            <label for="width">Width</label>
-            <input type="number" class="form-control" id="width" placeholder="Width">
-        </div>
-        <div class="form-group">
-            <label for="height">Height</label>
-            <input type="number" class="form-control" id="height" placeholder="Height">
-        </div>
-        <div class="form-group">
-            <label for="text">Text</label>
-            <input type="text" class="form-control" id="text" placeholder="Text">
-        </div>
-        <div class="form-group">
-            <label for="color">Height</label>
-            <input type="number" class="form-control" id="color" placeholder="Height">
-        </div>
+    <div class="row py-sm-3">
+        <div class="col-sm-4">
+            <form id="form" name="form">
+                <div class="form-group">
+                    <label for="width">Width</label>
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                        <input type="number" class="form-control" id="width" name="width" placeholder="Width (100px)">
+                        <div class="input-group-addon">px</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="height">Height</label>
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                        <input type="number" class="form-control" id="height" name="height" placeholder="Height (100px)">
+                        <div class="input-group-addon">px</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="bg">Color</label>
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                        <div class="input-group-addon">#</div>
+                        <input type="text" class="form-control" id="bg" name="bg" placeholder="Color (#ccc)" maxlength="6">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="text">Text</label>
+                    <input type="text" class="form-control" id="text" name="text" placeholder="Text">
+                </div>
+                <div class="form-group">
+                    <label for="color">Font color</label>
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                        <div class="input-group-addon">#</div>
+                        <input type="text" class="form-control" id="color" name="color" placeholder="Font color (#777)" maxlength="6">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="size">Font size</label>
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                        <input type="number" class="form-control" id="size" name="size" placeholder="Font size (12pt)">
+                        <div class="input-group-addon">pt</div>
+                    </div>
+                </div>
+            </form>
 
-        <button class="btn btn-primary">Send</button>
-    </form>
-
-    <div>
-        <div class="form-group">
-            <label for="result">Example textarea</label>
-            <textarea class="form-control" id="result" rows="5"></textarea>
+            <button class="btn btn-primary">Generate !</button>
         </div>
-
-        <img id="image" src="#image">
+        <div class="col-sm-8 d-none">
+            <div class="form-group">
+                <a href="#svg" class="badge badge-dark float-right copy">copy</a>
+                <label for="svg">SVG</label>
+                <pre class="form-control" id="svg"></pre>
+            </div>
+            <div class="form-group">
+                <a href="#src" class="badge badge-dark float-right copy">copy</a>
+                <label for="src">Encoded</label>
+                <pre class="form-control" id="src"></pre>
+            </div>
+            <div class="form-group">
+                <a href="#img" class="badge badge-dark float-right copy">copy</a>
+                <label for="img">Image</label>
+                <pre class="form-control" id="img"></pre>
+            </div>
+            <div class="form-group">
+                <label>Result</label>
+                <div id="result"></div>
+            </div>
+        </div>
     </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="fakeimage.js"></script>
+<script src="fake-image.js"></script>
 </body>
 </html>
-
-
