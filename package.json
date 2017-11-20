@@ -1,0 +1,22 @@
+{
+  "name": "fake-image",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bin/fake-image",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yehzuna/fake-image.git"
+  },
+  "author": "Thomas BORUSZEWSKI <yehzuna@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Yehzuna/fake-image/issues"
+  },
+  "homepage": "https://github.com/Yehzuna/fake-image#readme"
+}

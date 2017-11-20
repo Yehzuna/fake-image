@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+
+const fa = require('../lib/cli.js');
+
+const path = process.cwd() + '/';
+const [, , src, dest = src] = process.argv;
+
+fa.convert(path + src, path + dest);
